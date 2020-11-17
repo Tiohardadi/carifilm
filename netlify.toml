@@ -1,7 +1,7 @@
 [build]
   command = "npm run build"
-  publish="carifilm/build"
-  base = "carifilm"
+  publish="build/"
+  base = "/"
 
 [[redirects]]
   from = "/*"
