@@ -50,10 +50,10 @@ function Home(props) {
                         popularMovies.map((movie,id) =>{
                             return(
                             <div  className={id===0? "carousel-item active" : " carousel-item"} key={id} onClick={(e) => history.push(`/moviedetail/${movie.id}`)} style={{cursor:'pointer'}}>
-                                <img className="d-block  w-100" height="400px" src={"https://image.tmdb.org/t/p/w533_and_h300_bestv2/"+movie.backdrop_path} alt={id}></img>
-                                <div className="carousel-caption d-none d-md-block text-white" style={{ textShadow: '2px 1px 0px #121212'}}>
+                                <img className="d-block w-100" height="400px" src={"https://image.tmdb.org/t/p/w533_and_h300_bestv2/"+movie.backdrop_path} alt={id}></img>
+                                <div className="carousel-caption text-white " style={{ textShadow: '2px 1px 0px #121212'}}>
                                     <h2 style={{ color: '#F7D603'}} ><strong>{movie.title||movie.name}</strong></h2>
-                                    <p  >{movie.overview}</p>
+                                    <p  className="d-none d-sm-block" >{movie.overview}</p>
                                 </div>
                             </div>
                             )
@@ -73,7 +73,7 @@ function Home(props) {
             <div >
                 <div className="my-4">
                     <h5><strong>Trending</strong></h5>
-                    <div className="d-flex flex-wrap ">
+                    <div className="d-flex flex-wrap justify-content-md-start justify-content-around">
                         {
                             trendingMovies.map((movie,id) =>{
                                 return(
