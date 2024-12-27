@@ -1,26 +1,23 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import Search from '../Search';
 
-function Header(props) {
-    return (
-        <nav className="navbar navbar-expand-lg navbar-dark" style={{backgroundColor :'#121212'}}>
-            <div className="container mt-3">
-                <Link className="navbar-brand" to="/"><h4> <span  style={{color :'#F7D603'}}>Cari</span><span className="font-weight-bold">FILM</span> </h4></Link>
-                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div className="navbar-nav ml-auto" >
-                        <Link className="nav-item nav-link active" to="/">Home</Link>
-                        <Link className="nav-item nav-link" to="/">menu1</Link>
-                        <Link className="nav-item nav-link" to="/">menu2</Link>
-                        <Link className="nav-item nav-link" to="/">menu3</Link>
-                    </div>
-                </div>
-            </div>
-        </nav>
-
-    );
+function Header() {
+  return (
+    <nav className="navbar navbar-dark fixed-top" style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)' }}>
+      <div className="container d-flex justify-content-between align-items-center">
+        <Link className="navbar-brand d-flex align-items-center" to="/">
+          <h4 className="mb-0">
+            <span style={{ color: '#FCA311' }}>Cari</span>
+            <span style={{ color: '#FFFFFF' }}>FILM</span>
+          </h4>
+        </Link>
+        
+        <Search />
+      </div>
+    </nav>
+  );
 }
 
 export default Header;
+
